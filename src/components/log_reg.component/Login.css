@@ -1,0 +1,13 @@
+.Login {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3ef;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin: 20px 0;
+}
+
+p:hover {
+    cursor: default;
+}
