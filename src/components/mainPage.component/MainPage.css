@@ -1,0 +1,21 @@
+.MainPage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Naslov {
+    display: flex;
+    justify-items: end;
+    font-size: xx-large;
+    font-weight: bolder;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.Setting-button { 
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}

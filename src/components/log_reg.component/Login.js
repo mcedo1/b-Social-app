@@ -3,7 +3,6 @@ import '../log_reg.component/Login.css'
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Container, Card, Col, Form, Button, Alert } from 'react-bootstrap';
-import { redirect } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import api from '../../API/Api';
 
@@ -18,7 +17,8 @@ function Login() {
     
     const handleLogin = () => {
         console.log(user)
-        //logovanje...
+        //logovanje...s
+        navigate("/main");
     }
 
     return (
