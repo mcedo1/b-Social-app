@@ -2,7 +2,7 @@ import './App.css';
 import Footer from './components/footer.component/Footer';
 import Login from './components/log_reg.component/Login';
 import Registration from './components/log_reg.component/Registration';
-import MainPage from './components/main.pagecomponent/MainPage';
+import MainPage from './components/mainPage.component/MainPage';
 
 import {
   Routes,
@@ -15,9 +15,9 @@ function App() {
     <div className='App'>
       <div className="Main">
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route index path="/" element={<Login />} />
           <Route path="/reg" element={<Registration />} />
-          <Route path="/main" element={<MainPage/>} />
+          <Route path="/main" element={<MainPage />} />
         </Routes>
       </div>
       <Footer/>
