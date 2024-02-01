@@ -4,7 +4,7 @@ import Login from './components/log_reg.component/Login';
 import Registration from './components/log_reg.component/Registration';
 import MainPage from './components/mainPage.component/MainPage';
 import WebSocket from 'websocket';
-
+import { useEffect } from 'react';
 import {
   Routes,
   Route,
@@ -12,29 +12,29 @@ import {
 
 
 function App() {
-  useEffect(() => {
-    // Establish a WebSocket connection
-    const ws = new WebSocket('wss://localhost:8080');
+//   useEffect(() => {
+//     // Establish a WebSocket connection
+//     const ws = new WebSocket('wss://localhost:8080');
 
-    // Set up event listeners
-    ws.onopen = () => {
-      console.log('WebSocket connection opened');
-    };
+//     // Set up event listeners
+//     ws.onopen = () => {
+//       console.log('WebSocket connection opened');
+//     };
 
-    ws.onmessage = (event) => {
-      console.log('Received message:', event.data);
-      // Handle the incoming message
-    };
+//     ws.onmessage = (event) => {
+//       console.log('Received message:', event.data);
+//       // Handle the incoming message
+//     };
 
-    ws.onclose = () => {
-      console.log('WebSocket connection closed');
-    };
+//     ws.onclose = () => {
+//       console.log('WebSocket connection closed');
+//     };
 
-    // Clean up the WebSocket connection when the component is unmounted
-    return () => {
-      ws.close();
-    };
-  }, []);
+//     // Clean up the WebSocket connection when the component is unmounted
+//     return () => {
+//       ws.close();
+//     };
+//   }, []);
 
 
   return (
