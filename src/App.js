@@ -9,6 +9,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import AboutUsCommponent from './components/about.us.component/AboutUs';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Route index path="/" element={<Login />} />
           <Route path="/reg" element={<Registration />} />
           <Route path="/main" element={<MainPage />} />
+          <Route path='aboutUs' element={<AboutUsCommponent/>}/>
         </Routes>
       </div>
       <Footer/>
