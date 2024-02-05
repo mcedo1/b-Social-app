@@ -40,6 +40,10 @@ const MyModal = ({ postId }) => {
             if (res.status === "ok") GetAllComments();
         });
     };
+
+    // Function to reverse the order of comments
+    const reversedComments = commentList.slice().reverse();
+
     return (
         <div>
             <Button
@@ -56,12 +60,12 @@ const MyModal = ({ postId }) => {
                 <Modal.Body
                     style={{ display: "flex", flexDirection: "column" }}>
                     <Form>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">
+                        <div className="form-group">
+                            <label htmlFor="exampleFormControlTextarea1">
                                 Comment this post!
                             </label>
                             <textarea
-                                class="form-control"
+                                className="form-control"
                                 id="exampleFormControlTextarea1"
                                 rows="3"
                                 style={{ maxHeight: "150px" }}
@@ -79,11 +83,8 @@ const MyModal = ({ postId }) => {
                             Comment it!
                         </Button>
                     </Form>
-                    {
-                    console.log(commentList)}
-                    {
-                    commentList.map((coment, index) => (
-                        <Comment {...coment} />
+                    {reversedComments.map((comment, index) => (
+                        <Comment key={comment.commentId} {...comment} />
                     ))}
                 </Modal.Body>
                 <Modal.Footer>

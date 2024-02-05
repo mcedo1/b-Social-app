@@ -19,7 +19,8 @@ function Submain() {
     api(`/api/posts/${user_id}`,{}, 'get').then(
       res => {
         if(res.status === 'ok'){
-          setPosts(res.data)
+          // Ako su postovi već u pravilnom redoslijedu, uklonite reverse() poziv
+          setPosts(res.data.reverse())
         }
       }
     )
@@ -36,7 +37,7 @@ function Submain() {
     .then(
       res => {
         if(res.status === 'ok'){
-          toast.success("Succesfully added", {
+          toast.success("Successfully added", {
             position: 'top-right',
             autoClose: 1200,
             theme: "colored",
@@ -75,7 +76,7 @@ function Submain() {
               Post it!
             </Button>
 
-        {posts.map((p, index)=> <Post {...p}/>)}
+        {posts.map((p, index)=> <Post key={p.postId} {...p}/>)}
       </div>
       <div className="Followers">
         <p style={{fontFamily:'cursive', fontSize:'40px', flex:'1px', display:'flex', justifyContent:'center'}}>Our community</p>

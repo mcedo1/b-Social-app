@@ -21,7 +21,7 @@ function MainPage() {
   }, []);
 
   const handleScrollTop = () => {
-    // Scrollajte na vrh stranice
+
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
