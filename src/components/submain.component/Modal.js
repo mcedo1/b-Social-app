@@ -41,7 +41,7 @@ const MyModal = ({ postId }) => {
         });
     };
 
-    // Function to reverse the order of comments
+    
     const reversedComments = commentList.slice().reverse();
 
     return (
